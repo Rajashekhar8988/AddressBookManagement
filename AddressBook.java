@@ -87,10 +87,11 @@ class AddressBook {
 		do {
 			System.out.println("1.AddContact");
 			System.out.println("2.Display");
+			System.out.println("3.EditContact");
 			System.out.println("Enter your choice");
 			option=sc.nextInt();
 			switch(option) {
-			//add contact details into the address book
+			//add new contact details into the Address book
 			case 1:
 				System.out.println("Enter first name : ");
 				String firstName=sc.next();
@@ -122,6 +123,24 @@ class AddressBook {
 				}
 				System.out.println("-----------------------");
 			break;
+			//edit the contact details in the address book
+			case 3:
+				System.out.println("Enter the name to edit contact details");
+				String firstName1=sc.next();
+				System.out.println("-----------------------");
+				iterate=contact.iterator();
+				if(iterate.hasNext()) {
+					ContactDetails c1=iterate.next();
+					if(c1.getFirstName().equals(firstName1)){
+					c1.setPhoneNumber("987654321");
+					System.out.println(c1);
+				    }
+					else {
+						System.out.println("OOPS!.. your details are not matching");
+					}
+				}
+				System.out.println("-----------------------");
+			break;	
 			}
 		}while(option!=0);
 	}
