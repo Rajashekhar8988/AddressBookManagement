@@ -113,7 +113,7 @@ class AddressBook {
 			break;
 			//display the contact details present in address book
 			case 2:
-				System.out.println("---------------------------------------------------");
+				System.out.println("-------------------------------------------");
 				Iterator<ContactDetails> iterate=contact.iterator();
 				if(iterate.hasNext()) {
 					ContactDetails c=iterate.next();
@@ -122,13 +122,13 @@ class AddressBook {
 				else {
 					System.out.println("There is no details, please add data contact details");
 				}
-				System.out.println("---------------------------------------------------");
+				System.out.println("-------------------------------------------");
 			break;
 			//edit the contact details in the address book
 			case 3:
 				System.out.println("Enter the name to edit contact details");
 				String firstName1=sc.next();
-				System.out.println("---------------------------------------------------");
+				System.out.println("-------------------------------------------");
 				iterate=contact.iterator();
 				if(iterate.hasNext()) {
 					ContactDetails c1=iterate.next();
@@ -140,13 +140,13 @@ class AddressBook {
 						System.out.println("OOPS!.. your details are not matching");
 					}
 				}
-				System.out.println("---------------------------------------------------");
+				System.out.println("-------------------------------------------");
 			break;	
 			// delete the contact details from the address book
 			case 4:
 				System.out.println("Enter the name to delete contact details");
 				firstName1=sc.next();
-				System.out.println("---------------------------------------------------");
+				System.out.println("-------------------------------------------");
 				iterate=contact.iterator();
 				if(iterate.hasNext()) {
 					ContactDetails c2=iterate.next();
@@ -158,7 +158,7 @@ class AddressBook {
 						System.out.println("OOPS!.. please enter valid details");
 					}
 				}
-				System.out.println("---------------------------------------------------");
+				System.out.println("-------------------------------------------");
 			break;
 			}
 		}while(option!=0);
